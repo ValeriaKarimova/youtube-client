@@ -1,1 +1,17 @@
-<p>main works!</p>
+<main class="main">
+
+    <div class="cards__wrapper">
+      <div class="card" *ngFor="let card of data">
+        <img class="card__img" src="{{card.snippet.thumbnails.medium.url}}" alt="">
+        <div class="card__statistics">
+          <span class="views-count">{{card.statistics.viewCount}}</span>
+          <span class="likes-count">{{card.statistics.likeCount}}</span>
+          <span class="dislikes-count">{{card.statistics.dislikeCount}}</span>
+          <span class="comment-count">{{card.statistics.commentCount}}</span>
+        </div>
+        <h2 class="card__title">{{card.snippet.title}}</h2>
+        <button class="card__btn">more...</button>
+      </div>
+    </div>
+
+</main>
