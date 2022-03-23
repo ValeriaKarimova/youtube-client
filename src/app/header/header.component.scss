@@ -14,18 +14,19 @@
   }
 
   &__search {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
     align-items: center;
   }
 
   &__reg-btn__wrapper {
     display: flex;
-    align-items: center;
-    margin-top: 15px;
+    margin-top: 27px;
     gap: 10px;
+  }
+
+  &__user-name {
+    margin-top: 5px;
   }
 
   &__reg-btn {

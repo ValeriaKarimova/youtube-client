@@ -1,0 +1,25 @@
+.sorting {
+  &__types {
+    display: flex;
+    gap: 21px;
+    font: 14px 'Roboto', sans-serif;
+    font-weight: 400;
+    &::before {
+      content: 'Sorting by:';
+      color: rgba(146, 146, 146, 1);
+
+    }
+
+    &__input {
+      margin-left: 10px;
+    }
+  }
+
+  & li {
+    list-style: none;
+    color:rgba(47, 128, 237, 1);
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: baseline;
+  }
+}
