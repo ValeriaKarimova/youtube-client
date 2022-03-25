@@ -17,7 +17,5 @@ export class MainComponent implements OnInit {
     const response = await fetch('../assets/response.json');
     const result = await response.json();
     this.data = result.items;
-    console.log(this.data);
   }
-
 }

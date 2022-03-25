@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
-import { CardComponent } from './card/card.component';
 import { SearchComponent } from './search/search.component';
 import { SortingComponent } from './sorting/sorting.component';
 
@@ -16,7 +15,6 @@ import { SortingComponent } from './sorting/sorting.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    CardComponent,
     SearchComponent,
     SortingComponent,
   ],
