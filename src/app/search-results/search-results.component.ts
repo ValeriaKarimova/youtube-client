@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Item } from '../../services/interfaces';
 
 @Component({
@@ -8,6 +8,7 @@ import { Item } from '../../services/interfaces';
 })
 export class SearchResultsComponent implements OnInit {
   public data: Array<Item> = [];
+  @Input() isShown: Boolean = false;
 
   ngOnInit(): void {
     this.getData();

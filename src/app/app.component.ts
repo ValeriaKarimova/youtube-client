@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'youtube-client';
+  public title = 'youtube-client';
+  public isVisible = false;
+
+  changeVisibility() {
+    this.isVisible = true;
+  }
 }
