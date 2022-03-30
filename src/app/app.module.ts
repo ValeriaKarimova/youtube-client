@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MainComponent } from './main/main.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 import { SearchComponent } from './search/search.component';
 import { SortingComponent } from './sorting/sorting.component';
 
@@ -14,7 +14,7 @@ import { SortingComponent } from './sorting/sorting.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent,
+    SearchResultsComponent,
     SearchComponent,
     SortingComponent,
   ],

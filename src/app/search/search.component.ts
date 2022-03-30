@@ -6,9 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  public isFilterVisible = false;
-
-  changeFilterVisibility() {
-    this.isFilterVisible = !this.isFilterVisible;
-  }
 }

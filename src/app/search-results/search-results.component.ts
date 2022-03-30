@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../../services/interfaces';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  selector: 'app-search-results',
+  templateUrl: './search-results.component.html',
+  styleUrls: ['./search-results.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class SearchResultsComponent implements OnInit {
   public data: Array<Item> = [];
 
   ngOnInit(): void {
