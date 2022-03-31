@@ -1,7 +1,7 @@
 <main class="main">
 
     <div class="cards__wrapper" [ngClass]="{'invisible': !isShown}">
-      <div class="card" *ngFor="let card of data">
+      <div [appHighlight]="card" class="card" *ngFor="let card of data">
         <img class="card__img" src="{{card.snippet.thumbnails.medium.url}}" alt="">
         <div class="card__statistics">
           <span class="views-count">{{card.statistics.viewCount}}</span>

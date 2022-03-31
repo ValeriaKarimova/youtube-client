@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { SearchComponent } from './search/search.component';
 import { SortingComponent } from './sorting/sorting.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SortingComponent } from './sorting/sorting.component';
     SearchResultsComponent,
     SearchComponent,
     SortingComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
