@@ -6,11 +6,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  public results: Boolean = false;
   @Output() submitSearch = new EventEmitter();
+  @Output() filterButtonClick = new EventEmitter();
 
   handleSubmit(event: MouseEvent) {
     event.preventDefault();
-    this.submitSearch.emit(this.results = true);
+    this.submitSearch.emit(true);
+  }
+
+  handleFilterButtonClick() {
+    this.filterButtonClick.emit(true);
   }
 }

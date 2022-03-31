@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sorting',
   templateUrl: './sorting.component.html',
   styleUrls: ['./sorting.component.scss'],
 })
+
 export class SortingComponent {
+  @Input() isFilter: boolean = false;
 }

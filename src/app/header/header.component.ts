@@ -6,10 +6,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  public resultsValue: boolean = false;
-  @Output() results = new EventEmitter();
+  @Output() searchSubmit = new EventEmitter();
+  @Output() emitFilterClick = new EventEmitter();
 
   snowResults() {
-    this.results.emit(this.resultsValue = true);
+    this.searchSubmit.emit(true);
+  }
+
+  showFilter() {
+    this.emitFilterClick.emit(true);
   }
 }
