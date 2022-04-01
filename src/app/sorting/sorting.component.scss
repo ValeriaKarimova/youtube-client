@@ -27,6 +27,11 @@
     text-decoration: underline;
     cursor: pointer;
     align-self: baseline;
+
+    &:last-child {
+      text-decoration: none;
+      cursor: default;
+    }
   }
 }
 

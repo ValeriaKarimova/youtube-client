@@ -10,6 +10,7 @@ import { SortingType } from 'src/services/interfaces';
 export class SortingComponent {
   @Input() isFilter: boolean = false;
   @Output() typeEmmiter = new EventEmitter();
+  @Output() filterEmmiter = new EventEmitter();
 
   public ascendingOrder = true;
 
@@ -26,5 +27,10 @@ export class SortingComponent {
         break;
       }
     }
+  }
+
+  startFiltration(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.filterEmmiter.emit(target.value);
   }
 }

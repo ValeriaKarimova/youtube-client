@@ -11,8 +11,10 @@ export class AppComponent {
   public isVisible = false;
   public isFilterShown = false;
   public conf: ViewConfig;
+  public filterConf: string;
 
   constructor() {
+    this.filterConf = '';
     this.conf = {
       ascending: false,
       type: SortingType.none,
@@ -35,7 +37,10 @@ export class AppComponent {
       clone.ascending = !clone.ascending;
     }
     clone.type = type;
-
     this.conf = clone;
+  }
+
+  filterCards(param: string) {
+    this.filterConf = param;
   }
 }

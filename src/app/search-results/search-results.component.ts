@@ -15,8 +15,11 @@ import { Item, SortingType, ViewConfig } from '../../services/interfaces';
 export class SearchResultsComponent implements OnInit, OnChanges {
   public data: Array<Item> = [];
   public ascendingOrder = true;
+  public dataOrigin: Array<Item> = [];
+
   @Input() isShown: Boolean = false;
   @Input() declare viewConf: ViewConfig;
+  @Input() declare filterView: string;
 
   ngOnInit(): void {
     this.getData();
@@ -26,7 +29,24 @@ export class SearchResultsComponent implements OnInit, OnChanges {
     for (const propName in changes) {
       if (changes.hasOwnProperty('viewConf') && !changes['viewConf'].firstChange) {
           this.sortCards();
+      } else if (changes.hasOwnProperty('filterView') && !changes['filterView'].firstChange) {
+        this.filterCards();
       }
+    }
+  }
+
+  filterCards() {
+    const newArr = this.dataOrigin.slice();
+    this.data = newArr.filter((item) => {
+      for (const word of item.snippet.tags) {
+        if (word.includes(this.filterView)) {
+          return true;
+        }
+      }
+      return false;
+    });
+    if (this.filterView === '') {
+      this.data = this.dataOrigin;
     }
   }
 
@@ -70,5 +90,6 @@ export class SearchResultsComponent implements OnInit, OnChanges {
     const response = await fetch('../assets/response.json');
     const result = await response.json();
     this.data = result.items;
+    this.dataOrigin = this.data.slice();
   }
 }

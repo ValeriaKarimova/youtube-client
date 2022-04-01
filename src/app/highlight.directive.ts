@@ -1,10 +1,10 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 import { Item } from '../services/interfaces';
 
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective {
+export class HighlightDirective implements OnChanges {
   @Input() declare appHighlight: Item;
 
   constructor(private el: ElementRef) {
