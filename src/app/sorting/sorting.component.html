@@ -1,5 +1,5 @@
 <div class="sorting" [ngClass]="{'invisible': !isFilter}">
-  <ul class="sorting__types">
+  <ul class="sorting__types" (click)="startSorting($event)">
     <li>date</li>
     <li>count of views</li>
     <li>by word or sentance<input class="sorting__types__input" type="text"></li>

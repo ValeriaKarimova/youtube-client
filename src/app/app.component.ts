@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewConfig, SortingType } from 'src/services/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,15 @@ export class AppComponent {
   public title = 'youtube-client';
   public isVisible = false;
   public isFilterShown = false;
+  public conf: ViewConfig;
+
+  constructor() {
+    this.conf = {
+      ascending: false,
+      type: SortingType.none,
+      pattern: '',
+    };
+  }
 
   changeVisibility() {
     this.isVisible = true;
@@ -16,5 +26,16 @@ export class AppComponent {
 
   showFilter() {
     this.isFilterShown = !this.isFilterShown;
+  }
+
+  sortCards(type: SortingType) {
+    const clone = Object.assign({}, this.conf);
+
+    if (type === clone.type) {
+      clone.ascending = !clone.ascending;
+    }
+    clone.type = type;
+
+    this.conf = clone;
   }
 }

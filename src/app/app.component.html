@@ -1,4 +1,4 @@
 <app-header (searchSubmit)="changeVisibility()" (emitFilterClick)="showFilter()"></app-header>
-<app-sorting [isFilter]="isFilterShown"></app-sorting>
-<app-search-results [isShown]="isVisible"></app-search-results>
+<app-sorting [isFilter]="isFilterShown" (typeEmmiter)="sortCards($event)"></app-sorting>
+<app-search-results [isShown]="isVisible" [viewConf]="conf"></app-search-results>
 <app-footer></app-footer>

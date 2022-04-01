@@ -41,3 +41,15 @@ export interface Video {
   url: string;
   width: number;
 }
+
+export interface ViewConfig {
+  ascending: boolean;
+  type: SortingType;
+  pattern: string;
+}
+
+export enum SortingType {
+  date = 'publishedAt',
+  views = 'viewCount',
+  none = '',
+}
