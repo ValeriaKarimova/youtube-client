@@ -1,0 +1,47 @@
+.play-btn {
+  width: 50px;
+  height: 50px;
+  background-image: url(../../assets/images/play.svg);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+  &__btn {
+    background-color: #2f80ed;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(2px 0px 4px #2f80ed);
+    border-radius: 0 5px 5px 0;
+    padding: 4px 24px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 400px;
+    height: 22px;
+    border: 0;
+    background-color: rgb(241, 241, 241);
+  }
+
+  &__filter {
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(2px 0px 4px #2f80ed);
+    background-image: url(../../assets/images/filter.svg);
+    width: 34px;
+    height: 34px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,40 @@
+.sorting {
+  background-color: #E5E5E5;
+  display: flex;
+  justify-content: center;
+
+  &__types {
+    width: 45%;
+    display: flex;
+    gap: 21px;
+    font: 14px 'Roboto', sans-serif;
+    font-weight: 400;
+
+    &::before {
+      content: 'Sorting by:';
+      color: rgba(146, 146, 146, 1);
+    }
+
+    &__input {
+      margin-left: 10px;
+      border: 0;
+    }
+  }
+
+  & li {
+    list-style: none;
+    color:rgba(47, 128, 237, 1);
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: baseline;
+
+    &:last-child {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+.invisible {
+  display: none;
+}
