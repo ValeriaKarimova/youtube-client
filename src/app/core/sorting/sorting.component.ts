@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SortingType } from 'src/services/interfaces';
+import { SortingType } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-sorting',

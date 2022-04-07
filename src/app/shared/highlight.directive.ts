@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
-import { Item } from '../services/interfaces';
+import { Item } from './interfaces';
 
 @Directive({
   selector: '[appHighlight]'

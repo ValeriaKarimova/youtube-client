@@ -5,7 +5,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import { Item, SortingType, ViewConfig } from '../../services/interfaces';
+import { Item, SortingType, ViewConfig } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-search-results',
@@ -87,7 +87,7 @@ export class SearchResultsComponent implements OnInit, OnChanges {
   }
 
   async getData() {
-    const response = await fetch('../assets/response.json');
+    const response = await fetch('../../assets/response.json');
     const result = await response.json();
     this.data = result.items;
     this.dataOrigin = this.data.slice();

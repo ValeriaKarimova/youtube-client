@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ViewConfig, SortingType } from 'src/services/interfaces';
+import { ViewConfig, SortingType } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-root',

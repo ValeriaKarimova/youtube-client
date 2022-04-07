@@ -61,19 +61,19 @@
 }
 
 .views-count::before {
-  content: url(../../assets/images/viewed.svg);
+  content: url(../../../assets/images/viewed.svg);
 }
 
 .likes-count::before {
-  content: url(../../assets/images/liked.svg);
+  content: url(../../../assets/images/liked.svg);
 }
 
 .dislikes-count::before {
-  content: url(../../assets/images/dislike.svg);
+  content: url(../../../assets/images/dislike.svg);
 }
 
 .comment-count::before {
-  content: url(../../assets/images/comment.svg);
+  content: url(../../../assets/images/comment.svg);
 }
 
 .invisible {
