@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { SortingComponent } from './sorting/sorting.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SortingComponent } from './sorting/sorting.component';
     FooterComponent,
     SearchComponent,
     SortingComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { SortingComponent } from './sorting/sorting.component';
     FooterComponent,
     SearchComponent,
     SortingComponent,
+    ErrorComponent,
   ]
 })
 export class CoreModule {}

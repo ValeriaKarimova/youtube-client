@@ -1,0 +1,24 @@
+.error{
+
+  &__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 125px);
+  }
+
+  &__img {
+    display: inline-block;
+    background-image: url(../../../assets/images/404.svg);
+    width: 100px;
+    height: 90px;
+  }
+
+  &__text {
+    color: #828282;
+    font: 24px 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-left: 24px;
+  }
+
+}
